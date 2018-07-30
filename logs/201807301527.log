@@ -1,0 +1,11 @@
+2018-07-30 15:27:42,563 - BrowserEngine - INFO - You had select Chrome browser.
+2018-07-30 15:27:42,563 - BrowserEngine - INFO - The test server url is: http://58.16.67.216:8080/ganzhou-jg/
+2018-07-30 15:27:44,715 - BrowserEngine - INFO - Starting Chrome browser.
+2018-07-30 15:27:49,891 - BrowserEngine - INFO - Open url: http://58.16.67.216:8080/ganzhou-jg/
+2018-07-30 15:27:51,011 - BrowserEngine - INFO - Maximize the current window.
+2018-07-30 15:27:51,012 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-07-30 15:27:51,064 - BasePage - INFO - Had find the element '  ' successful by id via value: j_username 
+2018-07-30 15:27:51,131 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-07-30 15:27:51,158 - BasePage - INFO - Had find the element '  ' successful by id via value: j_password 
+2018-07-30 15:27:51,219 - BasePage - INFO - Had type ' 111111 ' in inputBox
+2018-07-30 15:27:59,163 - BasePage - INFO - The element ' µÇÂ¼ ' was clicked.
