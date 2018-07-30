@@ -15,5 +15,6 @@ class GanzhouLogin(unittest.TestCase):
         loginpage.login_input("admin",'111111')
         loginpage.send_submit()
 
+
 if __name__ == '__main__':
     unittest.main()
