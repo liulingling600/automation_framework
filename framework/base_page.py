@@ -152,7 +152,7 @@ class BasePage(object):
         logger.info("switch to framename is\' %s \'" % frame.text)
         return self.driver
 
-    #退出frame .
+    #退出frame..
     def back_from_frame(self):
         self.driver.switch_to.default_content()
         logger.info("back to defualt page from frame" )
