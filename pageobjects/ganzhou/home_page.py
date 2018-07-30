@@ -1,9 +1,10 @@
 from framework.base_page import BasePage
 
+
 class HomePage(BasePage):
-    #左边导航栏企业档案管理
-    business_archives_manage ='xpath=>//*[@id="side-menu"]/li[4]/a/span[1]'
-    #生产企业档案管理
+    # 左边导航栏企业档案管理
+    business_archives_manage = 'xpath=>//*[@id="side-menu"]/li[4]/a/span[1]'
+    # 生产企业档案管理
     producte_archives_manage = 'link=>生产企业档案管理'
     # 流通企业档案管理
     liutong_archives_manage = 'link=>流通企业档案管理'
@@ -16,19 +17,19 @@ class HomePage(BasePage):
     # 小作坊企业档案管理
     xiaoshiza_archives_manage = 'link=>小食杂档案管理'
 
-    #添加按钮,在iframe句柄里，点击要先切换句柄
+    # 添加按钮,在iframe句柄里，点击要先切换句柄
     add = 'xpath=>//*[@id="btnadd"]/span/span[1]'
     iframe_1 = 'name=>iframe0'
     iframe_2 = 'name=>iframe15'
 
-    #点击事件
-    def click_btn(self,selector):
+    # 点击事件
+    def click_btn(self, selector):
         self.click(selector)
 
-    #进入frame
-    def change_frame(self,selector):
+    # 进入frame
+    def change_frame(self, selector):
         self.to_frame(selector)
 
-
-
-
+    # 退出frame
+    def back_to_defualt_page(self):
+        self.back_from_frame()

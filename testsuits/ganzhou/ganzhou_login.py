@@ -7,13 +7,14 @@ class GanzhouLogin(unittest.TestCase):
         brower = BrowerEngine(self)
         self.driver = brower.open_browser(self)
 
-    def tearDown(self):
+    '''def tearDown(self):
         self.driver.quit()
-
+    '''
     def test_login(self):
         loginpage = LoginPage(self.driver)
         loginpage.login_input("admin",'111111')
         loginpage.send_submit()
+        return self.driver
 
 
 if __name__ == '__main__':
