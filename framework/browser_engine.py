@@ -15,7 +15,7 @@ class BrowerEngine(object):
     def open_browser(self, driver):
         #读取conifg.ini文件
         config = configparser.ConfigParser()
-        file_path = os.path.dirname(os.path.abspath('.')) + '/config/config.ini'
+        file_path = os.path.dirname(os.path.abspath('..')) + '/config/config.ini'
         print(file_path)
         config.read(file_path)
         browser = config.get("browserType", "browserName")

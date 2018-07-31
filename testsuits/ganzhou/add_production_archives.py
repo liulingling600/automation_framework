@@ -1,19 +1,43 @@
 import unittest
 from framework.browser_engine import BrowerEngine
 from pageobjects.ganzhou.home_page import HomePage
+from testsuits.ganzhou.ganzhou_login import GanzhouLogin
+import time
 
-class AddProductionArchves(unittest.TestCase):
+class AddProduction(unittest.TestCase):
 
-    def setUp(self):
-        brower = BrowerEngine(self)
-        self.driver = brower.open_browser(self)
+    @classmethod
+    def setUpClass(cls):
+        brower = BrowerEngine(cls)
+        cls.driver = brower.open_browser(cls)
+        GanzhouLogin.test_login(cls)
 
-    def tearDown(self):
-        self.driver.quit()
 
-    def test_click_add(self):
-        homepage = HomePage(self.driver)
-        homepage.click_btn(homepage.business_archives_manage)
-        homepage.click_btn(homepage.producte_archives_manage)
-        homepage.change_frame(homepage.iframe_2)
-        homepage.click_btn(homepage.add)
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+
+    def test_product_add(self):
+        homePage = HomePage(self.driver)
+        time.sleep(2)
+        homePage.click_btn(homePage.business_archives_manage)
+        time.sleep(1)
+        homePage.click_btn(homePage.producte_archives_manage)
+        time.sleep(1)
+        homePage.change_frame(homePage.iframe_production)
+        time.sleep(1)
+        homePage.click_btn(homePage.add)
+
+    def test_liutong_add(self):
+        homePage = HomePage(self.driver)
+        time.sleep(2)
+        homePage.click_btn(homePage.business_archives_manage)
+        time.sleep(1)
+        homePage.click_btn(homePage.liutong_archives_manage)
+        time.sleep(1)
+        homePage.change_frame(homePage.iframe_liutong)
+        time.sleep(1)
+        homePage.click_btn(homePage.add)
+
+if __name__ == '__main__':
+    unittest.main()

@@ -148,8 +148,8 @@ class BasePage(object):
     # 切换到frame句柄
     def to_frame(self, selector):
         frame = self.find_element(selector)
+        logger.info("The frame is \' %s \' was into." % frame.text)
         self.driver.switch_to.frame(frame)
-        logger.info("switch to framename is\' %s \'" % frame.text)
         return self.driver
 
     # 退出frame
