@@ -17,7 +17,7 @@ class AddProduction(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
-    def test_product_add(self):
+    def test_product_add_1(self):
         homePage = HomePage(self.driver)
         time.sleep(2)
         homePage.click_btn(homePage.business_archives_manage)
@@ -25,10 +25,10 @@ class AddProduction(unittest.TestCase):
         homePage.click_btn(homePage.producte_archives_manage)
         time.sleep(1)
         homePage.change_frame(homePage.iframe_production)
-        time.sleep(1)
+        time.sleep(2)
         homePage.click_btn(homePage.add)
 
-    def test_liutong_add(self):
+    def test_liutong_add_2(self):
         homePage = HomePage(self.driver)
         time.sleep(2)
         homePage.click_btn(homePage.business_archives_manage)
@@ -36,7 +36,7 @@ class AddProduction(unittest.TestCase):
         homePage.click_btn(homePage.liutong_archives_manage)
         time.sleep(1)
         homePage.change_frame(homePage.iframe_liutong)
-        time.sleep(1)
+        time.sleep(2)
         homePage.click_btn(homePage.add)
 
 if __name__ == '__main__':

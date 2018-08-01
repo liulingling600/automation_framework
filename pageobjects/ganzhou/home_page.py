@@ -18,7 +18,8 @@ class HomePage(BasePage):
     xiaoshiza_archives_manage = 'link_text=>小食杂档案管理'
 
     # 添加按钮,在iframe句柄里，点击要先切换句柄
-    add = 'xpath=>//*[@id="btnadd"]/span/span[1]'
+    # add = 'xpath=>//*[@id="btnadd"]/span/span[1]'
+    add = 'xpath=>//*[@id="btnadd"]/span/span[2]'
     iframe_production = 'name=>iframe15'
     iframe_liutong = 'name=>iframe16'
 

@@ -84,7 +84,7 @@ class BasePage(object):
                 self.get_windows_img()  # take screenshot
         elif selector_by == "n" or selector_by == 'name':
             element = self.driver.find_element_by_name(selector_value)
-        elif selector_by == "c" or selector_by == 'class_name':
+        elif selector_by == "c" or selector_by == 'class_name' :
             element = self.driver.find_element_by_class_name(selector_value)
         elif selector_by == "l" or selector_by == 'link_text':
             element = self.driver.find_element_by_link_text(selector_value)
@@ -148,8 +148,9 @@ class BasePage(object):
     # 切换到frame句柄
     def to_frame(self, selector):
         frame = self.find_element(selector)
-        logger.info("The frame is \' %s \' was into." % frame.text)
+        current_frame = frame.get_attribute('name')
         self.driver.switch_to.frame(frame)
+        logger.info("The frame \' %s \' was into." % current_frame)
         return self.driver
 
     # 退出frame
