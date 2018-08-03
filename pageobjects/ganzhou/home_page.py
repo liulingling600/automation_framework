@@ -20,7 +20,7 @@ class HomePage(BasePage):
     # 添加按钮,在iframe句柄里，点击要先切换句柄
     # add = 'xpath=>//*[@id="btnadd"]/span/span[1]'
     add = 'xpath=>//*[@id="btnadd"]/span/span[2]'
-    iframe_production = 'name=>iframe15'
+    iframe_production = 'name=>iframe16'
     iframe_liutong = 'name=>iframe16'
 
     # 点击事件

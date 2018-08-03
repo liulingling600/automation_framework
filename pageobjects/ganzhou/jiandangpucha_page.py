@@ -2,6 +2,7 @@ from framework.base_page import BasePage
 from selenium.webdriver.support.ui import Select
 
 class JanDangPuCha(BasePage):
+    testrusult = 'xpath=>//*[@id="datagrid-row-r2-2-0"]/td[2]/div'
     '''------------------企业信息----------------------'''
     business_name = 'id=>aqymc'
     business_addr = 'id=>azs'
@@ -25,13 +26,13 @@ class JanDangPuCha(BasePage):
     #保存
     save = 'xpath=>//*[@id="Btn"]/button[1]'
     #一级frame
-    frame_1 = 'name=>iframe15'
+    frame_1 = 'name=>iframe16'
     #二级frame
     frame_2 = 'name=>editFrame'
-    #----------------------相关证件
-    credit_code = 'id=>zzbh0' #相关信用代码
-    production_permit = 'name=>a4zzbh' #生产许可
-    certify_authority = 'name=>a4zzbh' #发证单位
+    #----------------------相关证件--------------------------
+    credit_code = 'id=>zzbh0' #社会信用代码
+    production_permit = 'xpath=>//*[@id="tabA1"]/tbody/tr[2]/td[2]/input[1]' #生产许可
+    certify_authority = 'xpath=>//*[@id="tabA1"]/tbody/tr[2]/td[4]/input' #发证单位
     certify_date = 'name=>a4fzrq' #发证日期
     valid_until = 'name=>a4yxqz' # 有效期至
     save2 = 'xpath=>//*[@id="editBtn"]/button[1]'

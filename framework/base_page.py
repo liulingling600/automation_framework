@@ -136,7 +136,7 @@ class BasePage(object):
         el = self.find_element(selector)
         try:
             el.click()
-            logger.info("The element \' %s \' was clicked." % el.text)
+            #logger.info("The element \' %s \' was clicked." % el.text)
         except NameError as e:
             logger.error("Failed to click the element with %s" % e)
 
@@ -157,6 +157,12 @@ class BasePage(object):
     def back_from_frame(self):
         self.driver.switch_to.default_content()
         logger.info("back to defualt page from frame")
+        return self.driver
+
+    # 执行javascript
+    def execute_js(self,js):
+        self.driver.execute_script(js)
+        logger.info("excute scripte \' %s \'" % js)
         return self.driver
 
     @staticmethod
